@@ -1,0 +1,41 @@
+% Xcolor (Extended Color) package
+\documentclass[12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% xcolor package %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% In this package we have 68 different colors.
+\usepackage[usenames, dvipsnames, svgnames, table]{xcolor} 
+
+% All xcolor options:
+% - usenames: Use the exact names of the colors, e.g. "orange", etc.
+% - dvipsnames: dvi and post-script names
+% - svgnames: scalable vector graphic
+% - table: Use for tables color
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% color definition %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definition format:
+% \definecolor{name}{model}{color-spec}
+%____________________________________
+%	model arg.  |	color-spec 		 |
+%===============|====================|
+% 	  gray		|    0 <= g <= 1 	 |
+%_______________|____________________|
+% 	  rgb		|  0 <= r,g,b <= 1   |
+%_______________|____________________|
+% 	  RGB		| 0 <= R,G,B <= 255  | % Use in monitors
+%_______________|____________________|		
+% 	  HTML		|  000000 - ffffff   |
+%_______________|____________________|		
+% 	  cymk: 	|  0 <= c,m,y,k <= 1 | % Use in print industry 
+%_______________|____________________|		
+
+\definecolor{my_orange}{rgb}{1, 0.5, 0}
+\definecolor{my_pink}{RGB}{255, 128,192}
+
+\begin{document}
+	
+	\noindent
+	\huge
+	This \textbf{\textcolor{my_orange}{color}} is my customized orange color.\\
+	And this \textbf{\textcolor{my_pink}{color}} is another one.
+	
+\end{document}

@@ -1,0 +1,95 @@
+% bibliography
+\documentclass[12pt, a4paper, onecolumn]{article}
+
+% ---------- Packages ----------
+ \usepackage{hyperref} % You can comment this line and see the result
+\usepackage{cite} % better numbering for cites
+
+%================================================================================================================
+
+% -------------- Method 1 -------------- %
+%
+% \begin{thebibliography}{99} % 1/2/3/... digit number is show that the numbers of bibliographies are the same as that number's digits 
+%	
+%	 \bibitem{citekey} text
+%	
+%	 \bibitem{citekey} text
+%
+%    e.g.
+%	 \bibitem{deb99} Deb. K., et.al., "..."..."	
+%		
+% \end{thebibliography}
+%
+% \cite{deb99}
+
+%================================================================================================================
+
+% -------------- Method 2 -------------- %
+%
+% Use BibTeX File:
+%
+% \bibliographystyle{style} 
+% \bibliography{bib file}
+%
+% Bib-styles:
+% 1- plain
+% 2- abbrv
+% 3- alpha
+% 4- ieeetr
+% 5- unsrt
+% 6- abstract
+% 7- acm
+% 8- authordate1
+% 9- apa
+% 10- named
+
+%================================================================================================================
+
+
+\begin{document}
+	
+	\title{Getting Started with \LaTeXe}
+	
+	\author{A. Author, Professor\\ Some Lab, Some Faculty, University of Iran\\ \texttt{prof-email@email.ac.ir}}
+	
+	\date{\today}
+	
+	\maketitle	
+	\pagebreak
+	
+	\section{Introduction} \label{intro}
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero\cite{Green95, Markovski09} eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna\cite{Markovski09} aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo\cite{Tierney94} dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est\cite{Green95} Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		
+		Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt\cite{Green95,Markovski09,Tierney94} ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo\cite{Green95} duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet\cite{Tierney94}.
+	
+	\section{What is \TeX?} \label{what is tex?}
+		This section\cite{Tierney94} is about that what is \TeX?
+	
+	\section{Advantages of \LaTeX}\label{advantages}
+		In this section we discuss\cite{Green95} about advantages\cite{Markovski09} of \LaTeX.
+	
+	\section{Editors} \label{editors}
+		Editors for \LaTeX is vast and we have so many editors. Also we have some special ones for any type of OS systems.
+	
+	\subsection{Editors in Windows} \label{editor.win} %\label{section.editor.win}
+		This section talk\cite{Green95,Tierney94} about Windows's editors.
+	
+	\subsection{Editors in Linux} \label{editor.linux} 
+		This section talk about Linux\cite{Green95,Markovski09,Tierney94} editors.
+	
+	\section{Conclusion} \label{conclusion}
+		Conclusion section is here\cite{Markovski09}.
+	
+%	You can comment this section because when you use bib file, TeX automatically bring this section at the end of the article
+%	\section*{References} \label{refs}
+%		This is references.
+	
+	
+	\bibliographystyle{ieeetr} % styles: plain - abbrv - alpha - ieeetr - unsrt - abstract - acm - authordate1 - apa - named
+	\bibliography{myRefs}
+	
+	
+	
+\end{document}

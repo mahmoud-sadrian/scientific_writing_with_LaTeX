@@ -1,0 +1,35 @@
+% Colors
+\documentclass[12pt]{article}
+
+% Base colors that we can use by color package:
+%    White 	   Red 	     Blue 	     Green
+%    Black 	   Cyan 	 Yellow 	 Magenta
+
+\usepackage{color}
+
+\pagecolor{yellow}
+
+\begin{document}
+	
+	\noindent
+	% 1- switch mode	{\color{color} Text...}
+	This color is {\color{red} red}.\\
+	
+	\noindent
+	% 2- command mode 	\textcolor{color}{text}
+	This color is \textcolor{blue}{blue}.\\
+	
+	\noindent
+	% color box
+	This part of text is in \colorbox{white}{white box}.\\
+	
+	\noindent
+	% framed color box	\fcolorbox{border-color}{fill-color}{text}
+	This part of text in \fcolorbox{red}{green}{green box with red frame}.\\
+	
+	\noindent
+	We have a specific sign in \emph{Pattern Recognition and Machine Learning, M. Bishop}'s book that when it place among the text means refer to a website. That sign was
+	\colorbox{blue}{\textcolor{white}{\textsf{\textbf{www}}}}. And This sign will many times in the text, so we could make a new-command in \LaTeX {} and use that command every time that we want to put this sign in the text.
+	
+	
+\end{document}

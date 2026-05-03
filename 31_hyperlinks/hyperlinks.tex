@@ -1,0 +1,61 @@
+% Hyper-reference / Hyper-links
+\documentclass[12pt]{article}
+
+% ---------- Packages ----------
+\usepackage{hyperref}
+
+% \hyperref[label]{text}
+
+\newcommand{\myHyperref}[2]{\hyperref[#1]{#2 \ref*{#1}}} % * was used for discard nested links.
+
+\begin{document}
+
+	\title{Getting Started with \LaTeXe}
+	
+	\author{A. Author, Professor\\ Some Lab, Some Faculty, University of Iran\\ \texttt{prof-email@email.ac.ir}}
+	
+	\date{\today}
+	
+	\maketitle	
+	\pagebreak
+	
+	
+	
+	
+	\section{Introduction} \label{intro}
+	{\noindent
+	This paper is organized as follow:
+	
+	\TeX typesetting system is reviewed in \hyperref[what is tex?]{Section ?}; % ? means that in simple \hyperref command can not calculate section number. Instead I've declare a new command for this issue above.
+	
+	% Advantages of \LaTeX is investigated in section \ref{advantages}; % ** old sentence **
+	  Advantages of \LaTeX is investigated in \myHyperref{advantages}{Section}.
+	
+	Editors software are provided in \myHyperref{editors}{Section} and windows and Linux editors are in \myHyperref{editor.win}{Section} and \myHyperref{editor.linux}{Section}.
+	
+	And conclusion is in \myHyperref{conclusion}{Section}.
+	}
+	
+	
+	
+	
+	
+	\section{What is \TeX?} \label{what is tex?}
+		This section is about that what is \TeX?
+	
+	\section{Advantages of \LaTeX}\label{advantages}
+		In this section we discuss about advantages of \LaTeX.
+
+	\section{Editors} \label{editors}
+		Editors for \LaTeX is vast and we have so many editors. Also we have some special ones for any type of OS systems.
+	
+	\subsection{Editors in Windows} \label{editor.win} %\label{section.editor.win}
+		This section talk about Windows's editors.
+	
+	\subsection{Editors in Linux} \label{editor.linux} 
+		This section talk about Linux editors.
+	
+	\section{Conclusion} \label{conclusion}
+		Conclusion section is here.
+
+\end{document}

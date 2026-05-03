@@ -1,0 +1,32 @@
+% new command
+\documentclass[12pt]{article}
+
+\usepackage{color}
+
+% \myRect
+\newcommand{\www}{\colorbox{blue}{\textcolor{white}{\textsf{\textbf{www}}}}}
+
+% \myRect{text}
+\newcommand{\myRect}[1]{\colorbox{blue}{\textcolor{white}{\textsf{\textbf{#1}}}}}
+
+% \myRect{fill-color}{text-color}{text}
+% \newcommand{\myRectangle}[1][2][3]{\colorbox{#1}{\textcolor{#2}{\textsf{\textbf{#3}}}}}
+
+\begin{document}
+	
+	% new-command without arguments:
+%	\noindent
+	We have a specific sign in \emph{Pattern Recognition and Machine Learning, M. Bishop}'s book that when it place among the text means refer to a website. That sign was
+	\www. And This sign will many times in the text, so we could make a new-command in \LaTeX {} and use that command every time that we want to put this sign in the text.\\
+	
+%	\noindent
+	Now I defined the command for this blue box and now use it here \www. Also can use it again \www and again \www and again \www.
+	
+%	\noindent
+	% new-command with arguments:
+	Now I defined a new command that is \verb*|\myRect{arg1}| and user can use the previous blue box by passing custom text as an argument for this command instead \textbf{\texttt{www}}. For example I can use it, \myRect{text}, \myRect{custom text}, \myRect{another text} and etc.\ .\\
+	
+%	\noindent
+	So, now I've add another command (\verb*|\myRect{fill-color}{text-color}{text}|) that is fully custom and you can customize the text, color of the text and the background color of the box, but it didn't work properly so I comment that new-command.\\
+	
+\end{document}

@@ -1,0 +1,27 @@
+% footnote
+\documentclass[12pt]{article}
+
+% Numbering systems:
+% 1- arabic 
+% 2- roman
+% 3- Roman
+% 4- alph
+% 5- Alph
+% 6- fnsymbol
+
+%%%%%%%%%%%%%%%% Also we can use these two commands in some place that \footnote{text} command not work: %%%%%%%%%%%%%%%%
+% \footnotetext[number]{text}
+% \footnotemark[number] % Just put footnote mark (sign). Not bring the description at the end of the page as footnote.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \renewcommand{\thefootnote}{\fnsymbol{footnote}} % Use \footnote{text} without renewcommand is use arabic system.
+
+\begin{document}
+	
+	\noindent
+	This book is written to cover the RL\footnote{Reinforcement Learning} topics. ML\footnote{Machine Learning} is Machine Learning.\\[12pt]
+	\noindent % Correct form of FOOTNOTE at the end of a sentence: % → **(.)\footnote{}**
+	Another topic is NLP.\footnote{Natural Language Processing}\\
+	
+\end{document}

@@ -1,0 +1,36 @@
+\documentclass[a4paper, 12pt, onecolumn]{article}
+
+% 1: Math form
+% 2: Use package "fixltx2e"
+
+\usepackage{fixltx2e}
+
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%% Math form %%%%%%%%%%%%%%%%%%%%%%
+	\noindent
+	\textbf{Superscript and subscript by using math form:}
+	
+	% Superscript:
+	\noindent
+	1$^\textrm{st}$ generation.\\ % Math form
+	% use textrm (text roman), because in math form ($...$) all the texts will be italic and "\textrm" avoid this.
+	
+	% Subscript:
+	\noindent
+	H$_2$O\\
+	
+	%%%%%%%%%%%%%%%%%%%%%% Use Package %%%%%%%%%%%%%%%%%%%%%%
+	
+	\noindent
+	\textbf{Superscript and subscript by using \emph{fixltx2e} package:}
+	
+	% Superscript:
+	\noindent
+	1\textsuperscript{st} generation.\\
+	
+	% Subscript:
+	\noindent
+	H\textsubscript{2}O
+	
+\end{document}

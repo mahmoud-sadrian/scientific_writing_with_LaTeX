@@ -1,0 +1,62 @@
+% footnote counter
+
+\documentclass[12pt, a4paper, onecolumn]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Applications of **\setcounter** for footnote: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1- Reset numbers for each chapter or section or etc.
+
+% 2- in numbering ystem switching (arabic, roman, Roman, alph, Alph, fnsymbol)
+
+% 3- MAnnual numbering
+
+% 4- If you have a file and it has some footnotes in it and now want to combime it by another file that has footnotes you can set the counter to the continued number of the previous file's footnotes.
+
+\usepackage{fixltx2e}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% optional commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \addtocounter{footnote}{difference} % d = -/+
+% \stepcounter{footnote}
+
+\begin{document}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\setcounter{footnote}{0} % 0 means that the last used number is 0
+	\section*{section 1}
+		\noindent
+		This is the 1\textsuperscript{st} footnote.\footnote{First footnote}\\
+		Also we are going to put another footnote mark right here.\footnote{Footnote mark}\\
+		Also we are going to put another footnote mark right here.\footnote{Footnote mark}
+		
+	\setcounter{footnote}{0}
+	\section*{section 2}
+		This is the 2\textsuperscript{nd} section of this article and this is the first footnote of this section.\footnote{Second section's footnote}
+		
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\newpage
+	
+	\setcounter{footnote}{0}
+	\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+	\noindent
+	I want to put this footnote as fnsymbol footnote.\footnote{fnsymbol footnote}\\
+	I want to put this footnote as fnsymbol footnote.\footnote{fnsymbol footnote}\\
+	I want to put this footnote as fnsymbol footnote.\footnote{fnsymbol footnote}\\
+	\\
+	
+%	\setcounter{footnote}{0} % un-comment this line and show the result
+	\renewcommand{\thefootnote}{\alph{footnote}}
+	\noindent
+	I want to put this footnote as fnsymbol footnote.\footnote{alph footnote}\\
+	I want to put this footnote as fnsymbol footnote.\footnote{alph footnote}\\
+	I want to put this footnote as fnsymbol footnote.\footnote{alph footnote}\\
+	\\
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+	
+	\noindent
+	I want to put \textbf{double-dagger} sign in this footnote mark.\footnote[3]{Double-dagger}
+	
+	
+\end{document}
